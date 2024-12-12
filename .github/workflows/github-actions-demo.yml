@@ -30,5 +30,3 @@ jobs:
 
       - name: use secret
         run: echo ${{secrets.GITHUB_TOKEN}}
-      - name: use secret
-        run: echo ${{secrets.GITHUB_TOKEN}}
