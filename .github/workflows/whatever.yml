@@ -1,0 +1,16 @@
+name: workflow2
+run-name: testing workflow
+on: [push, pull_request]
+jobs:
+  Runone:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{github.repository }} - repository name
+      - name: checkout repo
+        uses: actions/checkout@v4
+  Runone2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{github.repository }} - repository name 2
+      - name: checkout repo 2
+        uses: actions/checkout@v4
