@@ -9,6 +9,21 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4
   Runone2:
+    needs: Runone
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{github.repository }} - repository name 2
+      - name: checkout repo 2
+        uses: actions/checkout@v4
+  Runone3:
+    needs: Runone
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{github.repository }} - repository name 2
+      - name: checkout repo 2
+        uses: actions/checkout@v4
+  Runone4:
+    needs: [Runone2, Runone3]
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{github.repository }} - repository name 2
